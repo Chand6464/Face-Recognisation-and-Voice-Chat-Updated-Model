@@ -27,7 +27,7 @@ INPUT_SIZE = 112
 MEAN_RGB = np.array([122.782, 117.001, 104.298], dtype=np.float32)   # same numbers as face-api.js
 # face-api.js reads output index 0 of the gender softmax as the probability of MALE.
 # If your results come out with men and women swapped, change this to 1.
-MALE_INDEX = 1
+MALE_INDEX = 0
 
 
 # ----------------------------------------------------------------------------

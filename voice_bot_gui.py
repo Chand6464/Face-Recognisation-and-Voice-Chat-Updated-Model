@@ -638,7 +638,12 @@ class App:
         self.analyze = None              # set by the worker once the face model is loaded
 
         root.title("Face + Voice Chatbot")
-        root.geometry("1020x640")
+        icon = tk.PhotoImage(file="icon.png")
+        root.iconphoto(True, icon)
+        try:
+            root.state("zoomed")  # Windows & macOS
+        except tk.TclError:
+            root.attributes("-zoomed", True)
         root.minsize(900, 560)
         self._build()
         root.protocol("WM_DELETE_WINDOW", self.on_close)
